@@ -3,8 +3,14 @@ using namespace std
 
 // Structure of the node of a singly linked list
 class node{
+    public:
     int data;
     node* next;
+
+    node(int data){
+        this-> data = data;
+        this-> next = NULL;
+    }
 };
 
 // Function prototypes
@@ -21,9 +27,9 @@ void Traverse(node *head);
 
 int main()
 {
-    node *head1 = new node;
-    // Creating a head node of value 81
-    head1 = Create(81);
+    
+    //creating head of a new node with value 81
+    node *head1 = new node(81);
 
     //If we want to change " head1 = InsertAtEnd(head1, 2); " to " InsertAtEnd(head1, 2); " we will accept " node* &head1 " in agumented variable (i.e. the variable resieved by the function) like:-
     // node *InsertAtBeg(node* &head, int value)
@@ -68,7 +74,7 @@ int main()
     return 0;
 }
 
-// Function to create the head node (first node) of a singly linked list
+// Function to create the head node (first node) of a singly linked list (if constructor not present)
 node *Create(int value)
 {
     node *ptr = new node;
