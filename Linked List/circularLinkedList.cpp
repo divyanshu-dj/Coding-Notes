@@ -108,6 +108,13 @@ void deleteNode(Node* &tail, int value) {
 
 }
 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Checks if LL is circular
+
+
+//time complexity = O(n)
+//space complexity = O(1)
 bool isCircularList(Node* head) {
     //empty list
     if(head == NULL) {
@@ -127,6 +134,9 @@ bool isCircularList(Node* head) {
 
 }
 
+
+//time = O(n)
+//space = O(n)
 bool detectLoop(Node* head) {
 
     if(head == NULL)
@@ -150,6 +160,9 @@ bool detectLoop(Node* head) {
     return false;
 
 }
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 int main() {
