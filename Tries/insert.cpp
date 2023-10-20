@@ -1,0 +1,40 @@
+class Trie {
+  public:
+  TrieNode* root;
+
+  Trie() {
+    root = new TrieNode('\0');
+    return;
+  }
+
+  void insertUtil(TrieNode* root, string word) {
+
+    //base case
+    if(word.length() == 0) {
+      root->isTerminal = true;
+    }
+
+    //present
+    if(root->children[index] != NULL) {
+      child = root->children[index];
+    }
+    else {
+      //absent
+      child = new TrieNode(word[0]);
+      root->children[index] = child;
+    }
+
+    //recursion
+    insertUtil(child, word.substr(1));
+  }
+
+  void insertWord(string word) {
+    insertUtil(root, word);
+  }
+};
+
+int main() {
+  Trie *t = new Trie();
+
+  t->insertWord("abc");
+}
