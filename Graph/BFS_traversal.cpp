@@ -3,6 +3,10 @@
 #include<list>
 #include<set>
 
+//change all the list to set if we need the traversal in lexicographic order
+//i.e. if 1 connects with 4 and 8 then after 1 4 should be traversed then 8 not the other way around
+// and push_back changes to insert
+
 void prepareAdjList( unordered_map<int, list<int>> &adjList, vector<pair<int, int>> &edges) {
   for( int i=0; i<edges.size(); i++) {
     int u = edges[i].first;
