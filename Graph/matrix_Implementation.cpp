@@ -1,7 +1,9 @@
 int main() {
+  // n=> num of nodes
+  // m=> num of edges
   int n, m;
   cin>>n>>m;
-  int graph[n+1][m+1] = 0;
+  int graph[n+1][n+1] = 0;
   
   for( int i=0, i<m, i++) {
     int u, v;
